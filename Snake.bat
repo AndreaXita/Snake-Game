@@ -1,10 +1,9 @@
 @echo off
 color 02
 cls
-cd Desktop
-python snake.py
+python Snake.py
 echo I-----------------I
-echo I Python snake.py I
+echo I Python Snake.py I
 echo I-----------------I
 echo.
 echo.
