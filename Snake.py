@@ -9,32 +9,32 @@
 
 
 
-import curses
+import curses                    # import movements                                                                                                   
 from copy import copy
 from opcode import hasjabs
 from random import randint
 from curses import KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN
 
-curses.initscr() 
-window = curses.newwin(30, 60, 0, 0)
-window.keypad(True)
-window.border(0)
+curses.initscr()                       # start movements
+window = curses.newwin(30, 60, 0, 0)    # Create the window where the game will take place
+window.keypad(True)           # active the darts
+window.border(0)              # ad the border (the limit) in the window
 window.timeout(10)
-snake = [[15,13], [15,12], [15,11]]
-fruit = [5,35]
-fruit_ = [5,35]
-fruit__ = [5,35]
-fruit2 = [5,35]
-fruit2_ = [5,35]
-fruit3 = [5,35]
-fakefruit = [5,35]
-fakefruit_ = [5,35]
-fakefruit__ = [5,35]
-fakefruit2 = [5,35]
+snake = [[15,13], [15,12], [15,11]]              # create snake
+fruit = [5,35]                       #create the fruits that will give 1 point
+fruit_ = [5,35]                      #create the fruits that will give 1 point
+fruit__ = [5,35]                     #create the fruits that will give 1 point
+fruit2 = [5,35]                      #create the fruits that will give 2 point
+fruit2_ = [5,35]                     #create the fruits that will give 2 point
+fruit3 = [5,35]                      #create the fruits that will give 3 point
+fakefruit = [5,35]                   #create the fake fruits that take away 1 point
+fakefruit_ = [5,35]                  #create the fake fruits that take away 1 point
+fakefruit__ = [5,35]                 #create the fake fruits that take away 1 point
+fakefruit2 = [5,35]                  #create the fake fruits that take away 2 point
 start = [5,35]
-visual = KEY_RIGHT
-point = 0
-coin = 0
+visual = KEY_RIGHT                   #set the direction in which the snake will depart
+point = 0                            # start with 0 point
+coin = 0                             # start with 0 coin
 # window.addch(fruit[0], fruit[1], '1')
 # window.addch(fruit_[0], fruit_[1], '1')
 # window.addch(fruit__[0], fruit__[1], '1')
@@ -45,11 +45,11 @@ coin = 0
 # window.addch(fakefruit_[0], fakefruit_[1], 'x')
 # window.addch(fakefruit__[0], fakefruit__[1], 'x')
 # window.addch(fakefruit2[0], fakefruit2[1], 'X')
-window.addch(start[0], start[1], '5')
+window.addch(start[0], start[1], '5')             # the start point
 
 
-while True:
-    window.addstr(0, 20, '(Free 5 points event) Score: ' + str(point) + ' ')
+while True:           # game start
+    window.addstr(0, 20, '(Free 5 points event) Score: ' + str(point) + ' ')    # add every item in the game , impost the movements and add in which cases do you die
     window.addstr(0, 4, 'Coins : ' + str(coin) + ' ')
     tasto = window.getch()
     if tasto != -1:
@@ -168,11 +168,13 @@ while True:
 
 
 curses.endwin()
-print("""
+print("""              # the game over message
 
 GAME OVER,
 you have scored: """ 
          + str(point))
 print("and you got : " + str(coin) + """ Coins
 
- """)
+ """)                       
+
+# end !!!
