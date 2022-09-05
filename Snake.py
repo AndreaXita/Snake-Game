@@ -171,8 +171,8 @@ curses.endwin()
 print("""
 
 GAME OVER,
-hai totalizzato il punteggio di: """ 
+you have scored: """ 
          + str(point))
-print("e hai ottenuto : " + str(coin) + """ Coins
+print("and you got : " + str(coin) + """ Coins
 
  """)
