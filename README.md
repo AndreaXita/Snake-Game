@@ -18,3 +18,7 @@ if you lose ... there is no need to restart snake.bat, because when you lose it 
 To open the game, all you have to do is open the snake.bat file, 
 
 Good Game!!!!
+
+you are free to re-publish this package, but you cannot modify any of its files (C).
+
+resale prohibited!!!!!!!!
