@@ -1,7 +1,7 @@
 @echo off
 color 02
 cls
-python Snake.py
+python ::the file path of snake.py
 echo I-----------------I
 echo I Python Snake.py I
 echo I-----------------I
