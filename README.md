@@ -15,7 +15,7 @@ if you don't want to install windows-curses by hand I created Curses install.bat
 
 if you lose ... there is no need to restart snake.bat, because when you lose it takes you back to the cmd and I wrote the command "python snake.py" at the top ... just copy and send it in the cmd and you are back in the game ...
 
-To open the game, all you have to do is open the snake.bat file, 
+To open the game, all you have to do is open the snake.bat file, in Snake.bat change the insert the path of snake.py where is the comment ( delete @REM the file path of snake.py (es: desktop/snake/snake.py) and insert your path 
 
 Good Game!!!!
 
